@@ -145,6 +145,16 @@
         "loving"
       ],
       "id": "14"
+    },
+    {
+      "name": "Blue",
+      "species": "Canine",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "zany",
+        "anxious"
+      ],
+      "id": "15"
     }
   ]
 }
