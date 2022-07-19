@@ -135,6 +135,16 @@
         "zany"
       ],
       "id": "13"
+    },
+    {
+      "name": "Luna",
+      "species": "Canine",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "zany",
+        "loving"
+      ],
+      "id": "14"
     }
   ]
 }

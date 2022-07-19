@@ -11,6 +11,9 @@ const PORT = process.env.PORT || 3001;
 // Step 1. Instantiate the server
 const app = express();
 
+// Require Middleware
+app.use(express.static('public'));
+
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
@@ -104,6 +107,23 @@ app.get('/api/animals/:id', (req, res) => {
     } else {
       res.send(404);
     }
+  });
+
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+  });
+
+app.get('/animals', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/animals.html'));
+  });
+
+app.get('/zookeepers', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/zookeepers.html'));
+  });
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
   });
 
 
